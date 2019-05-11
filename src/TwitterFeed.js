@@ -1,25 +1,33 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
+import { graphql, compose } from 'react-apollo'
+import { Container, Row, Col } from 'react-bootstrap'
+import { TWITTER_FEED_QUERY } from './data/queries'
 
 class TwitterFeed extends Component {
 
     render() {
-        const { author } = this.props
-        return (
-            <div>
-              <Container>
-                <Row>
-                  <Col md={5}>
-                    Left side
-                  </Col>
-                  <Col md={7}>
-                    Right side
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-        )
+      const { author, tweets } = this.props
+      return (
+          <div>
+            <Container>
+              <Row>
+                <Col md={5}>
+                  Form will go here
+                </Col>
+                <Col md={7}>
+                  Tweets will go here
+                </Col>
+              </Row>
+            </Container>
+          </div>
+      )
     }
+
 }
 
-export default TwitterFeed
+export default compose(
+  graphql(TWITTER_FEED_QUERY, {
+    name: 'tweets'
+  })
+
+)(TwitterFeed)
