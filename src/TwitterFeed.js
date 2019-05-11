@@ -7,6 +7,10 @@ import TweetForm from './components/TweetForm'
 
 class TwitterFeed extends Component {
 
+  handleSubmitSucess = () => {
+    this.props.tweets.refetch()
+  }
+
     render() {
       const { author, tweets } = this.props
 
@@ -18,6 +22,7 @@ class TwitterFeed extends Component {
               <Row>
                 <Col md={5}>
                   <TweetForm
+                    handleSubmitSucess={ this.handleSubmitSucess }
                     author={author}
                   />
                 </Col>
@@ -38,5 +43,4 @@ export default compose(
   graphql(TWITTER_FEED_QUERY, {
     name: 'tweets'
   })
-
-)(TwitterFeed)
+  )(TwitterFeed)

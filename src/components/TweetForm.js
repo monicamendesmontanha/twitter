@@ -17,6 +17,10 @@ class TweetForm extends Component {
         author: this.props.author
       }
     })
+
+    if (createTweetResult.data.createTweet.id) {
+      this.props.handleSubmitSucess()
+    }
   }
 
 
