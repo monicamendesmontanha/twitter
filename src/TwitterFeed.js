@@ -9,7 +9,7 @@ class TwitterFeed extends Component {
     render() {
       const { author, tweets } = this.props
 
-      console.log('tweets:', tweets)
+      // console.log('tweets:', tweets)
 
       return (
           <div>
@@ -19,7 +19,9 @@ class TwitterFeed extends Component {
                   Form will go here
                 </Col>
                 <Col md={7}>
-                  <TweetList tweets={tweets.allTweets} />
+                  <TweetList tweets={tweets.allTweets}
+                  loading={tweets.loading}
+                  />
                 </Col>
               </Row>
             </Container>
