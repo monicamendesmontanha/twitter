@@ -16,7 +16,7 @@ body {
 }
 
 .tweet-list__tweet--container {
-  /* border: 2px solid blue; */
+  border-bottom: 2px solid grey;
   margin-bottom: 40px;
 }
 
@@ -26,6 +26,13 @@ body {
 
 .tweet-list__tweet--message {
   font-size: 0.9em;
+  padding: 20px;
+}
+
+
+.tweet-list__tweet--createdAt {
+  font-size: 10px;
+  color: #fff;
 }
 
 .fadein {
