@@ -19,7 +19,7 @@ class TwitterFeed extends Component {
                   Form will go here
                 </Col>
                 <Col md={7}>
-                  <TweetList />
+                  <TweetList tweets={tweets.allTweets} />
                 </Col>
               </Row>
             </Container>
