@@ -3,6 +3,7 @@ import { graphql, compose } from 'react-apollo'
 import { Container, Row, Col } from 'react-bootstrap'
 import { TWITTER_FEED_QUERY } from './data/queries'
 import TweetList from './components/TweetList'
+import TweetForm from './components/TweetForm'
 
 class TwitterFeed extends Component {
 
@@ -16,7 +17,9 @@ class TwitterFeed extends Component {
             <Container>
               <Row>
                 <Col md={5}>
-                  Form will go here
+                  <TweetForm
+                    author={author}
+                  />
                 </Col>
                 <Col md={7}>
                   <TweetList tweets={tweets.allTweets}
