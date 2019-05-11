@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Container, Row, Col } from 'react-bootstrap';
 
 class TwitterFeed extends Component {
 
@@ -6,7 +7,16 @@ class TwitterFeed extends Component {
         const { author } = this.props
         return (
             <div>
-                Hi, {author}!
+              <Container>
+                <Row>
+                  <Col md={5}>
+                    Left side
+                  </Col>
+                  <Col md={7}>
+                    Right side
+                  </Col>
+                </Row>
+              </Container>
             </div>
         )
     }
