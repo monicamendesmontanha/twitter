@@ -46,12 +46,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let author = localStorage.getItem(TWITTER_USERNAME_KEY)
-    if (!author) {
-      author = generateSillyName()
-      localStorage.setItem(TWITTER_USERNAME_KEY, author)
-    }
-    this.setState({ author })
+    // let author = localStorage.getItem(TWITTER_USERNAME_KEY)
+    // if (!author) {
+    //   author = generateSillyName()
+    //   localStorage.setItem(TWITTER_USERNAME_KEY, author)
+    // }
+    this.setState({ author: 'Monica' })
   }
 
   render() {
