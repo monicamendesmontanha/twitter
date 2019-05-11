@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import generateSillyName from 'sillyname'
+// import generateSillyName from 'sillyname'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { split } from 'apollo-link'

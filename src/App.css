@@ -52,11 +52,12 @@ button {
   padding: 10px;
   margin: 3px;
   color: #fff;
+  width: 20%;
 }
 
 textarea {
-  border: 2px solid rgb(120, 120, 180);;
+  border: 3px solid rgb(120, 120, 180);;
   border-radius: 0.5em;
   color: rgb(161, 161, 204);
-  width: 80%;
+  width: 100%;
 }
